@@ -1,0 +1,326 @@
+/* ===================================
+   Mobile First Responsive Styles
+   =================================== */
+
+/* Mobile (default styles are already mobile-friendly) */
+
+/* ===================================
+   Tablet (768px and up)
+   =================================== */
+@media (max-width: 768px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    /* Navigation */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-lg) var(--spacing-md);
+        box-shadow: var(--shadow-lg);
+        transition: right 0.3s ease;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: var(--spacing-sm) 0;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-link-cta {
+        margin-top: var(--spacing-sm);
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image .image-placeholder {
+        max-width: 280px;
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Links Grid */
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Form */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+/* ===================================
+   Small Mobile (480px and down)
+   =================================== */
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Container padding */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Logo */
+    .logo-image {
+        height: 45px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-coaching {
+        font-size: 0.8rem;
+    }
+
+    .logo-name {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero-image .image-placeholder {
+        max-width: 240px;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+        padding: var(--spacing-md);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Link Cards */
+    .link-card {
+        padding: var(--spacing-md);
+    }
+
+    /* Nav menu width adjustment */
+    .nav-menu {
+        max-width: 100%;
+    }
+}
+
+/* ===================================
+   Desktop (1024px and up)
+   =================================== */
+@media (min-width: 1024px) {
+    /* Typography enhancements */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    /* Hero adjustments */
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero-image .image-placeholder {
+        max-width: 450px;
+    }
+
+    /* Hover effects for desktop */
+    .feature-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .link-card:hover {
+        transform: translateY(-8px);
+    }
+}
+
+/* ===================================
+   Large Desktop (1440px and up)
+   =================================== */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+    }
+
+    .hero-content {
+        max-width: 1400px;
+    }
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+@media print {
+    .header,
+    .mobile-menu-toggle,
+    .nav-menu,
+    .hero-buttons,
+    .contact-section,
+    .footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ===================================
+   Accessibility Enhancements
+   =================================== */
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0056b3;
+        --text-dark: #000000;
+        --gray-light: #cccccc;
+    }
+
+    .nav-link::after {
+        height: 3px;
+    }
+
+    .link-card,
+    .feature-card {
+        border: 2px solid var(--text-dark);
+    }
+}
+
+/* Dark mode removed - website will always use light color scheme */
