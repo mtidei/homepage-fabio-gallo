@@ -384,6 +384,12 @@ section {
     min-height: 600px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+}
+
+.hero .container {
+    text-align: left;
+    width: 100%;
 }
 
 .hero-content {
@@ -614,6 +620,17 @@ section {
     color: var(--error-color);
     border: 1px solid var(--error-color);
     display: block;
+}
+
+/* ===================================
+   Content Grid
+   =================================== */
+.content-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
 }
 
 /* ===================================

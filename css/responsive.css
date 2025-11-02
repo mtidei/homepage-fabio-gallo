@@ -111,6 +111,12 @@
         grid-template-columns: 1fr;
     }
 
+    /* Content grid becomes single column on mobile */
+    .content-grid-2col {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
     /* Contact Form */
     .form-row {
         grid-template-columns: 1fr;
